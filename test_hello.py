@@ -16,6 +16,11 @@ class TestHello(unittest.TestCase):
         self.assertEqual(hello.sub(-1, -1), 0)
         self.assertEqual(hello.sub(0, 5), -5)
 
+    def test_mul(self):
+        self.assertEqual(hello.mul(2, 3), 6)
+        self.assertEqual(hello.mul(-1, 1), -1)
+        self.assertEqual(hello.mul(0, 5), 0)
+
     def test_sin(self):
         self.assertEqual(hello.sin(0), 0)
         self.assertEqual(hello.sin(1), 0.8414709848078965)
