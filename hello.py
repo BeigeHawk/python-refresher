@@ -25,6 +25,8 @@ def div(a, b):
 
 
 def sqrt(a):
+    if a < 0:
+        raise ValueError("Can't calculate square root of negative number!")
     return np.sqrt(a)
 
 
