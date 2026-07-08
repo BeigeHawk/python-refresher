@@ -12,6 +12,7 @@ print(f"Sum of vectors: {vector_sum}")
 print(f"Difference of vectors: {vector_dif}")
 print("")
 
+
 # Problem 2
 A = np.array([[1,2],[3,4]])
 B = np.array([[5,6],[7,8]])
@@ -43,3 +44,11 @@ print("Problem 4")
 print(f"Product of matrices: {matrix_product}")
 print("")
 
+# Problem 5
+a2 = np.array([1,1,2])
+
+magnitude = np.linalg.norm(a2)
+
+print("Problem 5")
+print(f"Magnitude of vector: {magnitude}")
+print("")
