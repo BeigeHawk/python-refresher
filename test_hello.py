@@ -1,5 +1,6 @@
 import unittest
 import hello
+import numpy as np
 
 
 class TestHello(unittest.TestCase):
@@ -35,6 +36,12 @@ class TestHello(unittest.TestCase):
         self.assertEqual(hello.power(2, 3), 8)
         self.assertEqual(hello.power(5, 0), 1)
         self.assertEqual(hello.power(3, 2), 9)
+        self.assertRaises(ValueError, hello.power, 0, -1)
+
+    def test_log(self):
+        self.assertEqual(hello.log(1), 0)
+        self.assertEqual(hello.log(np.e), 1)
+        self.assertRaises(ValueError, hello.log, -1)
 
     def test_sin(self):
         self.assertEqual(hello.sin(0), 0)

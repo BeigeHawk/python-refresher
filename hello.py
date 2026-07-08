@@ -31,10 +31,14 @@ def sqrt(a):
 
 
 def power(a, b):
+    if a == 0 and b < 0:
+        raise ValueError("Can't raise zero to a negative power!")
     return np.power(a, b)
 
 
 def log(a):
+    if a <= 0:
+        raise ValueError("Can't calculate logarithm of non-positive number!")
     return np.log(a)
 
 
