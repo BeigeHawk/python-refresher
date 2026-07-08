@@ -32,3 +32,14 @@ dot_product = np.dot(a, b)
 print("Problem 3")
 print(f"Dot product of vectors: {dot_product}")
 print("")
+
+# Problem 4
+A2 = np.array([[1,2,3],[4,5,6]])
+B2 = np.array([[7,8,9,10],[11,12,13,14],[15,16,17,18]])
+
+matrix_product = np.dot(A2, B2)
+
+print("Problem 4")
+print(f"Product of matrices: {matrix_product}")
+print("")
+
