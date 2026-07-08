@@ -31,6 +31,11 @@ class TestHello(unittest.TestCase):
         self.assertEqual(hello.sqrt(9), 3)
         self.assertRaises(ValueError, hello.sqrt, -1)
 
+    def test_power(self):
+        self.assertEqual(hello.power(2, 3), 8)
+        self.assertEqual(hello.power(5, 0), 1)
+        self.assertEqual(hello.power(3, 2), 9)
+
     def test_sin(self):
         self.assertEqual(hello.sin(0), 0)
         self.assertEqual(hello.sin(1), 0.8414709848078965)
