@@ -43,6 +43,12 @@ class TestHello(unittest.TestCase):
         self.assertEqual(hello.log(np.e), 1)
         self.assertRaises(ValueError, hello.log, -1)
 
+    def test_exp(self):
+        self.assertEqual(hello.exp(2), np.exp(2))
+        self.assertEqual(hello.exp(4), np.exp(4))
+        self.assertEqual(hello.exp(5), np.exp(5))
+
+
     def test_sin(self):
         self.assertEqual(hello.sin(0), 0)
         self.assertEqual(hello.sin(1), 0.8414709848078965)
