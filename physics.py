@@ -2,12 +2,9 @@ import numpy as np
 
 
 # Problem 1
-def calculate_buoyancy(self):
+def calculate_buoyancy(volume, density_fluid):
     g = 9.81
-    volume = self.volume # Cubic meters
-    density_fluid = self.density_fluid # Kilograms per cubic meter
-    buoyant_force = density_fluid * volume * g
-    return buoyant_force # Newtons
+    return volume * density_fluid * g
 
 # Problem 2
 def will_it_float(self):
