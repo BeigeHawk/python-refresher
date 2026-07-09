@@ -38,3 +38,10 @@ def calculate_acceleration(self):
     acceleration = F / m
     return acceleration
 
+# Problem 5
+def calculate_angular_acceleration(self):
+    tau = self.torque
+    I = self.moment_of_inertia
+    angular_acceleration = tau / I
+    return angular_acceleration
+
