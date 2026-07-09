@@ -31,4 +31,10 @@ def calculate_pressure(self):
     pressure = fluid_density * g * depth
     return pressure
 
-    
+# Problem 4
+def calculate_acceleration(self):
+    F = self.force
+    m = self.mass
+    acceleration = F / m
+    return acceleration
+
