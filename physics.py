@@ -4,14 +4,14 @@ import numpy as np
 # Problem 1
 def calculate_buoyancy(volume, density_fluid):
     g = 9.81
-    return volume * density_fluid * g
+    buoyancy = volume * density_fluid * g
+    return buoyancy
 
 # Problem 2
-def will_it_float(self):
-    buoyant_force = self.calculate_buoyancy()
-    V = self.volume # Cubic meters
-    mass = self.mass # Kilograms
-    weight = mass * 9.81 # Meters per second squared
+def will_it_float(volume, density_fluid, mass):
+    g = 9.81
+    buoyant_force = volume * density_fluid * g
+    weight = mass * g
     if buoyant_force > weight:
         return True
     else:
@@ -21,46 +21,31 @@ def will_it_float(self):
             return False
 
 # Problem 3
-def calculate_pressure(self):
-    g = 9.81 # Meters per second squared
-    density_fluid = self.density_fluid # Kilograms per cubic meter
-    depth = self.depth # Meters
+def calculate_pressure(density_fluid, depth):
+    g = 9.81
     pressure = density_fluid * g * depth
-    return pressure # Pascals
+    return pressure
 
 # Problem 4
-def calculate_acceleration(self):
-    F = self.force # Newtons
-    m = self.mass # Kilograms
-    acceleration = F / m
-    return acceleration # Meters per second squared
+def calculate_acceleration(force, mass):
+    acceleration = force / mass
+    return acceleration
 
 # Problem 5
-def calculate_angular_acceleration(self):
-    tau = self.torque # Newton-meters
-    I = self.moment_of_inertia # kg * m^2
+def calculate_angular_acceleration(tau, I):
     angular_acceleration = tau / I
     return angular_acceleration
 
 # Problem 6
-def calculate_torque(self):
-    F_magnitude = self.force_magnitude # Newtons
-    F_direction = self.force_direction # Degrees
-    r = self.position_vector # Meters
+def calculate_torque(F_magnitude, F_direction, r):
     torque = np.cross(r, F_magnitude * F_direction)
     return torque
 
 # Problem 7
-def calculate_moment_of_inertia(self):
-    m = self.mass # Kilograms
-    r = self.radius # Meters
+def calculate_moment_of_inertia(m, r):
     moment_of_inertia = 0.5 * m * r ** 2
     return moment_of_inertia
-
+"""
 # Problem 8
-def calculate_auv_acceleration(self):
-    F_magnitude = self.force_magnitude # Newtons
-    F_angle = self.force_angle # Radians
-    mass = self.mass # Kilograms, default is 100 kg
-    volume = self.volume # Cubic meters, default is 0.1 m^3
-    thruster_distance = self.thruster_distance # Meters
+def calculate_auv_acceleration(F_magnitude, F_angle, mass, volume, thruster_distance):
+"""
