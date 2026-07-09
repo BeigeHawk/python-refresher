@@ -38,7 +38,7 @@ def calculate_angular_acceleration(tau, I):
 
 # Problem 6
 def calculate_torque(F_magnitude, F_direction, r):
-    torque = np.cross(r, F_magnitude * F_direction)
+    torque = np.array(r * (F_magnitude * F_direction))
     return torque
 
 # Problem 7
