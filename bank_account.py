@@ -24,6 +24,6 @@ class BankAccount:
         return self.balance
 
     def print_balance(self):
-        balance_message = f"Hello {self.name}, the balance for account {account_number} is {self.balance}."
+        balance_message = f"Hello {self.name}, the balance for account {self.account_number} is {self.balance}."
         print(balance_message)
         return balance_message
