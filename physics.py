@@ -53,3 +53,9 @@ def calculate_torque(self):
     torque = np.cross(r, F_magnitude * F_direction)
     return torque
 
+# Problem 7
+def calculate_moment_of_inertia(self):
+    m = self.mass
+    r = self.radius
+    moment_of_inertia = 0.5 * m * r ** 2
+    return moment_of_inertia
