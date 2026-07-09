@@ -45,3 +45,11 @@ def calculate_angular_acceleration(self):
     angular_acceleration = tau / I
     return angular_acceleration
 
+# Problem 6
+def calculate_torque(self):
+    F_magnitude = self.force_magnitude
+    F_direction = self.force_direction
+    r = self.position_vector
+    torque = np.cross(r, F_magnitude * F_direction)
+    return torque
+
